@@ -23,7 +23,7 @@ declare interface IUser extends Partial<User> {
 
 declare interface IAuthCallbacks {
     onRegister?: (user: User) => void;
-    onLogin?: (user: User) => void;
+    onLogin?: (user: User, token?: string) => void;
     onLogout?: (auth: Auth) => any;
 }
 

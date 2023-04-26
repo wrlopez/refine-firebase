@@ -57,7 +57,7 @@ export class FirebaseAuth {
                 const userCredential = await signInWithEmailAndPassword(this.auth, email, password);
                 const userToken = await userCredential?.user?.getIdToken?.();
                 if (userToken) {
-                    this.authActions?.onLogin?.(userCredential.user);
+                    this.authActions?.onLogin?.(userCredential.user, userToken);
                 } else {
                     return Promise.reject();
                 }
