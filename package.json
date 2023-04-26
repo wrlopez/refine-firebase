@@ -16,7 +16,8 @@
   },
   "scripts": {
     "dev": "tsc --watch --preserveWatchOutput",
-    "build": "tsc"
+    "build": "tsc",
+    "install": "npm run build"
   },
   "dependencies": {
     "firebase": "^9.16.0",
